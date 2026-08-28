@@ -1,0 +1,15 @@
+{
+  "name": "shilo-skills",
+  "owner": {
+    "name": "Shilo Magen",
+    "url": "https://github.com/shilomagen"
+  },
+  "plugins": [
+    {
+      "name": "velocity",
+      "source": "./velocity",
+      "description": "One prompt from idea to mergeable PRs — plan, grill, adversarial review, tickets, parallel implementation, evidence-backed verification, stacked PRs looped to green.",
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "skill_name": "full-cycle",
+  "note": "Full runs create real tickets, branches, and PRs. Run evals only against a sandbox repo and a sandbox tracker team, or as dry-runs (ask the agent for its execution plan without side effects).",
+  "evals": [
+    {
+      "id": 1,
+      "name": "backend-resilience-offline-buffering",
+      "prompt": "We have a bug: our hook agent reports metrics to an endpoint that's behind VPN, but sometimes developers aren't connected to the VPN. Right now those metrics are just rejected and lost. I want this to be resilient: if we're offline, buffer everything that was missed and upload it once we're online again. Tracker team is agentside. /full-cycle",
+      "expected_output": "Phase 1 investigates the actual hook/transport code before designing; if the investigation finds the capability already exists (as it does in agentrail's hook-agent spool), it stops and re-scopes with the user instead of ticketizing a duplicate. Otherwise: grills on buffer bounds, ordering, dedup, disk location, retry cadence; adversarial reviewer probes double-send and disk-full scenarios; verification plan includes a simulated-offline test. Phases 2-5: Linear project under agentside with vertically-sliced blocked tickets, parallel implementation with per-ticket branches and evidence comments, backend verification with a temporary simulation of VPN loss (removed before ship), stacked or single PR looped until CI green and the bot satisfied.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "client-feature-with-figma",
+      "prompt": "Add CSV export to the alerts table — button in the toolbar, respects the active filters, matches this Figma: <figma-link>. Team is agentside. /full-cycle",
+      "expected_output": "Plan grounded in the existing table/filter components; grill covers row limits, column selection, and server- vs client-side generation; verification plan requires screenshots, a pixel-perfect Figma comparison, a re-render profile of the toolbar, and a bundle-size delta; ship phase ends with an evidence-linked PR looped to green.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "vague-performance-complaint",
+      "prompt": "our webhook retry logic is hammering the DB every time a customer endpoint goes down. make it sane. /full-cycle",
+      "expected_output": "Phase 1 refuses to design from the complaint alone: investigates the actual retry path and query patterns first, quantifies the load, and grills on acceptable delivery latency, backoff policy, and give-up semantics. The rest of the pipeline proceeds only after the user approves a plan with measured evidence, and backend verification includes taking a fake customer endpoint down and capturing the DB load before/after.",
+      "files": []
+    }
+  ]
+}

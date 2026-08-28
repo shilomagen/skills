@@ -1,0 +1,20 @@
+{
+  "name": "velocity",
+  "version": "0.1.0",
+  "description": "Full-cycle delivery pipeline: plan, grill, adversarial review, tickets, parallel agent implementation, evidence-backed verification, stacked PRs looped to green.",
+  "author": {
+    "name": "Shilo Magen",
+    "url": "https://github.com/shilomagen"
+  },
+  "repository": "https://github.com/shilomagen/skills",
+  "license": "MIT",
+  "keywords": [
+    "workflow",
+    "agents",
+    "planning",
+    "linear",
+    "stacked-prs",
+    "verification",
+    "orchestration"
+  ]
+}
