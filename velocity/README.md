@@ -47,6 +47,8 @@ Run against localhost:3000; design system in docs/DESIGN_SYSTEM.md — no blue, 
 
 ## verify: backend
 Stack runs via `make dev`. ClickHouse and Postgres creds in README.
+Observability: Coralogix — query logs, metrics, and traces via the cx CLI
+(auth from CX_API_KEY); filter on app `my-service`.
 ```
 
 Anything missing gets asked once during the grill, and the skill offers to save the answers here so it never asks again.

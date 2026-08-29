@@ -16,6 +16,16 @@ Verify against a running instance — the repo's dev stack, not a mental model o
 
 When a flow can't be triggered from outside — a queue consumer, a retry path, a scheduled job — add a temporary simulation endpoint or script that drives it deterministically. Simulation code is scaffolding: remove it once the evidence is captured, and verify the removal landed before ship.
 
+## Observability
+
+The change's telemetry is part of its behavior — code that works but reports nothing (or lies) fails verification. Query the observability platform the repo uses (`.fullcycle.md` names it and how to authenticate — CLI, MCP tools, or API with the right headers), and capture the queries and their results as evidence:
+
+- **Logs** — the exercised flows emit their log lines at the expected level with the expected fields, and produce zero new error-class entries.
+- **Metrics** — counters and gauges the change adds or touches actually move when the behavior runs: query before, exercise, query after.
+- **Traces** — the exercised flow appears as a complete trace: the expected spans present and parented correctly, durations sane, no error spans.
+
+Without platform access, the service's own metrics endpoint and local logs are the fallback — use them, and name the gap in the report rather than skipping the section.
+
 ## Resilience
 
 When the change involves a dependency — a queue, a cache, an external API — verify the failure half: take the dependency down mid-flow, capture the behavior the plan promised (buffering, retry, graceful degradation), then bring it back and confirm recovery drains cleanly.

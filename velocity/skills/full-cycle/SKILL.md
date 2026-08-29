@@ -44,6 +44,7 @@ review bot: CodeRabbit                  # absent → CI green is the bar
 
 ## verify: backend
 <how to run the stack, credentials, what to check>
+<observability: the platform, how to query it — CLI / MCP / API + auth — and what app/subsystem to filter on>
 ```
 
 Anything missing gets asked during the grill in phase 1 — fold the questions in there rather than asking up front. Then offer to write the answers to `.fullcycle.md` so the next run never asks.
