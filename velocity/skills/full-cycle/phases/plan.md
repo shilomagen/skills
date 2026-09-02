@@ -37,7 +37,11 @@ Dispatch a fresh strongest-model subagent:
 
 > Read `<skill-dir>/references/plan-review.md` and follow it. The plan is at `<scratch>/plan.md`. The repo root is `<path>`.
 
-You wrote this plan, so you're the wrong judge of it — that's the reviewer's whole job. For every finding that comes back: change the plan, or record in `plan.md` why it stands. Findings only the user can arbitrate go to the user. If the findings forced significant changes, dispatch a fresh reviewer at the new version; the review is closed when a fresh reviewer returns no blocking findings.
+You wrote this plan, so you're the wrong judge of it — that's the reviewer's whole job.
+
+**One review.** Every reviewer is fresh and told to attack, and every fix hands the next one new surface to attack, so "review until a reviewer returns nothing" never terminates. Take the findings once, then close.
+
+For each finding: fix the plan, or record in `plan.md` why it stands. Whatever that leaves open — a finding you don't accept, or a call only the user can make — goes to the gate in §6 with both positions readable. It never buys another reviewer.
 
 ## 5. Verification plan
 
@@ -50,7 +54,7 @@ Write it now, while the design intent is sharpest. The agent verifying in phase 
 
 ## 6. The gate
 
-Present the plan and the verification plan to the user for approval. This is the pipeline's only gate: after a yes, tickets, branches, and PRs get created without further permission. On edits, fold them in and present again.
+Present the plan and the verification plan to the user for approval. Lead with what needs their judgment — the recommendations §3 left standing and whatever §4 left open. This is the pipeline's only gate: after a yes, tickets, branches, and PRs get created without further permission. On edits, fold them in and present again; edits don't reopen the review.
 
 Two practicalities to surface alongside the plan, so the autonomous run actually runs autonomously:
 
