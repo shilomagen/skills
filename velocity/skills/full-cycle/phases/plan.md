@@ -22,14 +22,14 @@ Write `plan.md` in the run's scratch directory:
 
 ## 3. Grill the user
 
-If a grilling skill is installed, invoke it on the draft. Otherwise interview relentlessly:
+**One round.** Every question goes out in a single batch, the answers come back, and the grill is over — a second round is the tedium this rule exists to prevent. The user can reopen it; you can't.
 
-- One theme per round: scope, failure modes, edge cases, rollout, non-goals.
-- Facts are your job — dig in the code rather than asking the user anything the repo can answer. Decisions are the user's — surface each one crisply, with a recommendation.
-- Fold in the configuration gaps (tracker, team, review bot) if `.fullcycle.md` didn't cover them.
-- Stop when a round surfaces nothing new.
+- Facts are your job — dig them out of the code *before* you compose the round. A question waiting on a lookup is a second round in disguise.
+- Decisions are the user's: scope, failure modes, edge cases, rollout, non-goals, and the configuration gaps (tracker, team, review bot) `.fullcycle.md` didn't fill. Number each question and give it a recommended answer.
+- **7 questions** is the ceiling — the ones that actually change the plan. Anything below the cut, or that only makes sense once another question is answered, takes your recommendation instead of a question.
+- If a grilling skill is installed, invoke it on the draft — one round, and its own stopping rule doesn't override that.
 
-Update `plan.md` after every round; decisions get recorded, not remembered.
+Record the answers in `plan.md`; decisions get recorded, not remembered. Anything the user didn't settle stands as your recommendation, listed at the top of the plan so they read it first at the gate.
 
 ## 4. Adversarial review
 
