@@ -7,7 +7,7 @@ argument-hint: "<the feature or bug> [tracker team, constraints]"
 
 # Full Cycle
 
-One prompt in, mergeable PRs out. Five phases run the work from raw idea to PRs that are green, review-bot-clean, and ready for a human to merge. The human is grilled once, approves the plan once, and everything after that runs autonomously — every claim backed by evidence, every ticket kept current, every PR looped until green.
+One prompt in, mergeable PRs out. Five phases run the work from raw idea to PRs that are green, review-bot-clean, and ready for a human to merge. The human answers one round of grilling, approves the plan once, and everything after that runs autonomously — every claim backed by evidence, every ticket kept current, every PR looped until green.
 
 Two ideas carry the whole pipeline:
 

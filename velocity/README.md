@@ -26,7 +26,7 @@ That's the whole interaction, apart from answering the grill and approving the p
 This pipeline is a working style compressed into a skill. Eight decisions, each doing real work:
 
 1. **The strongest model plans.** Planning, reviewing, implementing, and verifying reward intelligence; only ticket clerking goes to a cheaper model.
-2. **Get grilled before anything is built.** The agent digs facts out of the code itself and interviews you only on genuine decisions — one theme per round, until a round surfaces nothing new.
+2. **Get grilled before anything is built.** The agent digs facts out of the code itself and interviews you only on genuine decisions — one round, every question with a recommended answer; anything you didn't settle is listed at the top of the plan to flip at the gate.
 3. **A fresh agent reviews the plan.** The model that wrote a plan is the worst judge of it. An adversarial reviewer with no authorship bias attacks assumptions, failure modes, blast radius, and rollback — and must report what it probed even when nothing is blocking.
 4. **The verification plan is written before the code.** While design intent is sharpest, every changed behavior gets a proof procedure and a named evidence artifact. Verification later is execution, not improvisation.
 5. **Tickets are cut for parallelism.** A project under your team, vertical-slice tickets with blocking links, each passing the fresh-agent test: an agent with only the ticket text and the repo can finish the work.
